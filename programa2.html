@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<canvas width="600" height="400"></canvas>
+
+<body>
+
+<script> //Chama o JS
+
+    /*
+  //Função criada para evitar repetição e criar o bloco do quadrado
+        function desenhaQuadradoVerde() {
+    
+            var tela = document.querySelector('canvas'); // transportando o canvas para o javaS
+            var pincel = tela.getContext('2d'); //pincel 2d que vai preencher da tela
+    
+            pincel.fillStyle = 'green';
+            pincel.fillRect(0, 0, 50, 50); //O que será preenchido em verde, o quadrado
+            pincel.strokeStyle = 'black'; //Cor da borda do quadrado
+            pincel.strokeRect(0, 0, 50, 50); // parametros de onde a borda começa e finaliza nos eixos X e Y
+    
+
+            // Documentação sobre strokeStyle : CanvasRenderingContext2D
+    }
+    
+    desenhaQuadradoVerde();
+    desenhaQuadradoVerde();
+    desenhaQuadradoVerde(); 
+    */ 
+
+
+    /*
+  //função com quadrados coloridos. tiramos a cor do nome função e colocamos no parâmetr    o
+    function desenhaQuadrado(x, y, cor) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, 50);
+}
+
+    desenhaQuadrado(0, 0, 'blue');
+    desenhaQuadrado(0, 50, 'red');
+    desenhaQuadrado(0, 100, 'yellow');
+    */
+
+
+   
+
+    // mesma função usando for e While
+    function desenhaQuadrado(x, y, cor) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(x, y, 50, 50);
+
+}
+    /*
+    var x = 0;
+
+    while(x < 600) {
+
+        desenhaQuadrado(x, 0, 'green');
+    x = x + 50;
+    }
+   */
+    for(var x = 0; x < 600; x = x + 50) {
+    desenhaQuadrado(x, 0, 'green');
+    }
+
+
+
+    
+    </script>
+
+</body>
+</html>

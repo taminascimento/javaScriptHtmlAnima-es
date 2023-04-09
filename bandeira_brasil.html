@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<canvas width="600" height="400"></canvas> <!--Tag canvas -->
+
+<body>
+    <script>
+        // variáveis canvas API 2D
+        var tela = document.querySelector("canvas"); //variável para criar a tela
+        var pincel = tela.getContext('2d'); // variável p pincel  preencher a tela
+
+        //retângulo
+        pincel.fillStyle = 'green';
+        pincel.fillRect(0, 0, 600, 400);
+
+        //triângulos (formarão o losango)
+        // triângulo 1
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 50); //Ponto de partida: meio do valor de X + inicio de Y com espaçamento
+        pincel.lineTo(50, 200); //Linha lateral 1: A linha partindo de X sai onde y é 50 e finaliza onde y é 200
+        pincel.lineTo(550, 200); // Linha lateral 2: A linha termina onde X é 550 e onde y é 200
+        pincel.fill();
+
+        //triângulo 2 (invertido)
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 350); //Ponto de partida: metade do valor de x e total de Y menos valor do espaço que é igual em todos os lados.
+        pincel.lineTo(50, 200); //Linha lateral 1: Ponto que se inicia em x tirando espaçamento e até metade do valor de y
+        pincel.lineTo(550, 200); //Linha Lateral 2: Ponto onde ela para e corta x e ponto onde finaliza em y ( metade do seu valor)
+        pincel.fill();
+
+        //círculo
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc( 300, 200, 100, 0, 2* 3.14 ); // Onde começa em X; em Y; valor do raio; ângulo inicial e final em radianos(PI).
+        pincel.fill();
+
+
+
+
+
+    </script>
+</body>
+</html>
